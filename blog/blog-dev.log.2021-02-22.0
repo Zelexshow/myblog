@@ -1,0 +1,975 @@
+2021-02-22 14:34:54.054  INFO 5564 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 5564 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 14:34:54.058 DEBUG 5564 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 14:34:54.058  INFO 5564 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 14:34:54.136  INFO 5564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 14:34:54.146  INFO 5564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 14:34:56.523  INFO 5564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 14:34:56.613  INFO 5564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2021-02-22 14:34:57.929  INFO 5564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 14:34:57.941  INFO 5564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 14:34:57.942  INFO 5564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 14:34:58.043  INFO 5564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 14:34:58.043  INFO 5564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3896 ms
+2021-02-22 14:34:58.437  INFO 5564 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 14:34:58.551  INFO 5564 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 14:34:59.897  INFO 5564 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 14:35:00.545  INFO 5564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 14:35:01.574  INFO 5564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 14:35:01.617  INFO 5564 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 14:35:02.849  INFO 5564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 14:35:02.863  INFO 5564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 14:35:02.930  INFO 5564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 14:35:03.958  WARN 5564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 14:35:04.143  INFO 5564 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 14:35:04.272  INFO 5564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 14:35:04.975  INFO 5564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 14:35:05.015  INFO 5564 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 12.114 seconds (JVM running for 18.991)
+2021-02-22 14:35:05.060  INFO 5564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 14:35:05.061  INFO 5564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 14:35:05.061  INFO 5564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-02-22 14:35:05.106  INFO 5564 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 14:35:05.420  WARN 5564 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 14:35:05.430  WARN 5564 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 14:35:05.440  INFO 5564 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 14:35:05.441  INFO 5564 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:19:09.249  INFO 10436 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 10436 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 15:19:09.257 DEBUG 10436 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 15:19:09.257  INFO 10436 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 15:19:09.286  INFO 10436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 15:19:09.286  INFO 10436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 15:19:10.229  INFO 10436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 15:19:10.278  INFO 10436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2021-02-22 15:19:10.985  INFO 10436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 15:19:10.992  INFO 10436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 15:19:10.992  INFO 10436 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 15:19:11.060  INFO 10436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 15:19:11.060  INFO 10436 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1774 ms
+2021-02-22 15:19:11.224  INFO 10436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 15:19:11.302  INFO 10436 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 15:19:11.458  INFO 10436 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 15:19:11.537  INFO 10436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 15:19:11.985  INFO 10436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 15:19:12.001  INFO 10436 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 15:19:14.729  INFO 10436 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 15:19:14.749  INFO 10436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 15:19:14.801  INFO 10436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 15:19:15.187  WARN 10436 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'blogRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository' defined in com.zelex.dao.BlogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract org.springframework.data.domain.Page com.zelex.dao.BlogRepository.findByQuery(java.lang.String,org.springframework.data.domain.Pageable)!
+2021-02-22 15:19:15.187  INFO 10436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 15:19:15.189  INFO 10436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-22 15:19:15.195  INFO 10436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-22 15:19:15.197  INFO 10436 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-22 15:19:15.217  INFO 10436 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-22 15:19:15.264 ERROR 10436 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'blogRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository' defined in com.zelex.dao.BlogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract org.springframework.data.domain.Page com.zelex.dao.BlogRepository.findByQuery(java.lang.String,org.springframework.data.domain.Pageable)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.zelex.MyblogApplication.main(MyblogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogRepository' defined in com.zelex.dao.BlogRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract org.springframework.data.domain.Page com.zelex.dao.BlogRepository.findByQuery(java.lang.String,org.springframework.data.domain.Pageable)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract org.springframework.data.domain.Page com.zelex.dao.BlogRepository.findByQuery(java.lang.String,org.springframework.data.domain.Pageable)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:146)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:216)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1051)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$6(RepositoryFactoryBeanSupport.java:326)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.QueryException: Unable to resolve path [b.title], unexpected token [b] [select b from com.zelex.po.Blog where b.title like ?1 or b.content like ?1]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:725)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at com.sun.proxy.$Proxy107.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87)
+	... 64 common frames omitted
+Caused by: org.hibernate.QueryException: Unable to resolve path [b.title], unexpected token [b] [select b from com.zelex.po.Blog where b.title like ?1 or b.content like ?1]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:604)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:716)
+	... 72 common frames omitted
+Caused by: org.hibernate.QueryException: Unable to resolve path [b.title], unexpected token [b]
+	at org.hibernate.hql.internal.ast.tree.IdentNode.resolveAsNakedComponentPropertyRefLHS(IdentNode.java:292)
+	at org.hibernate.hql.internal.ast.tree.IdentNode.resolve(IdentNode.java:143)
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:114)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolveFirstChild(DotNode.java:172)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.lookupProperty(HqlSqlWalker.java:709)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.addrExpr(HqlSqlBaseWalker.java:5068)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1299)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.exprOrSubquery(HqlSqlBaseWalker.java:4771)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.comparisonExpr(HqlSqlBaseWalker.java:4381)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2161)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.logicalExpr(HqlSqlBaseWalker.java:2111)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.whereClause(HqlSqlBaseWalker.java:827)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:621)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:325)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:273)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 78 common frames omitted
+
+2021-02-22 15:21:24.812  INFO 5748 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 5748 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 15:21:24.813 DEBUG 5748 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 15:21:24.833  INFO 5748 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 15:21:24.861  INFO 5748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 15:21:24.861  INFO 5748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 15:21:25.302  INFO 5748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 15:21:25.350  INFO 5748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2021-02-22 15:21:25.852  INFO 5748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 15:21:25.858  INFO 5748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 15:21:25.858  INFO 5748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 15:21:25.905  INFO 5748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 15:21:25.906  INFO 5748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
+2021-02-22 15:21:26.009  INFO 5748 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 15:21:26.037  INFO 5748 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 15:21:26.105  INFO 5748 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 15:21:26.164  INFO 5748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 15:21:26.412  INFO 5748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 15:21:26.424  INFO 5748 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 15:21:26.915  INFO 5748 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 15:21:26.921  INFO 5748 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 15:21:26.958  INFO 5748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 15:21:27.698  WARN 5748 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 15:21:27.842  INFO 5748 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 15:21:27.928  INFO 5748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 15:21:28.393  INFO 5748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 15:21:28.406  INFO 5748 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.899 seconds (JVM running for 4.377)
+2021-02-22 15:21:33.661  INFO 5748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 15:21:33.662  INFO 5748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 15:21:33.662  INFO 5748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-02-22 15:21:33.689  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 15:21:33.869  WARN 5748 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 15:21:33.881  WARN 5748 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 15:21:33.888  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 15:21:33.889  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:21:37.673  INFO 5748 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[]}
+2021-02-22 15:21:37.674  INFO 5748 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 15:21:37.674  INFO 5748 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:21:52.898  INFO 5748 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 测试, {}]}
+2021-02-22 15:21:52.909  INFO 5748 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:21:52.910  INFO 5748 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:22:32.040  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 更新, {}]}
+2021-02-22 15:22:32.043  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:22:32.044  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:22:40.306  INFO 5748 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 更新, {}]}
+2021-02-22 15:22:40.310  INFO 5748 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:22:40.311  INFO 5748 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:23:29.360  INFO 5748 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 格式, {}]}
+2021-02-22 15:23:29.364  INFO 5748 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:23:29.364  INFO 5748 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:24:43.818  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 格式, {}]}
+2021-02-22 15:24:43.821  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:24:43.821  INFO 5748 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:24:43.852 ERROR 5748 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "search": An error happened during template parsing (template: "class path resource [templates/search.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/search.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "page.total" (template: "search" - line 45, col 71)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "page.total" (template: "search" - line 45, col 71)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'total' cannot be found on object of type 'org.springframework.data.domain.PageImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 69 common frames omitted
+
+2021-02-22 15:24:43.879 ERROR 5748 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/search.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'total' cannot be found on object of type 'org.springframework.data.domain.PageImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-02-22 15:25:27.225  INFO 5748 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/search', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.search', args=[Page request [number: 0, size 2, sort: updateTime: DESC], 格式, {}]}
+2021-02-22 15:25:27.228  INFO 5748 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:search
+2021-02-22 15:25:27.228  INFO 5748 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 15:26:26.269  INFO 5748 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 15:26:26.291  INFO 5748 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 15:26:26.291  INFO 5748 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:00:25.383  INFO 14304 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 14304 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 16:00:25.385 DEBUG 14304 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 16:00:25.385  INFO 14304 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 16:00:25.412  INFO 14304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 16:00:25.412  INFO 14304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 16:00:26.016  INFO 14304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 16:00:26.067  INFO 14304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2021-02-22 16:00:26.605  INFO 14304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 16:00:26.611  INFO 14304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 16:00:26.612  INFO 14304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 16:00:26.665  INFO 14304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 16:00:26.665  INFO 14304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1253 ms
+2021-02-22 16:00:26.819  INFO 14304 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 16:00:26.950  INFO 14304 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 16:00:27.120  INFO 14304 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 16:00:27.233  INFO 14304 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 16:00:27.550  INFO 14304 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 16:00:27.566  INFO 14304 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 16:00:28.244  INFO 14304 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 16:00:28.250  INFO 14304 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 16:00:28.286  INFO 14304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 16:00:28.932  WARN 14304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 16:00:29.048  INFO 14304 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 16:00:29.118  INFO 14304 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 16:00:29.316  INFO 14304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 16:00:29.322  INFO 14304 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 4.288 seconds (JVM running for 4.888)
+2021-02-22 16:00:40.194  INFO 14304 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 16:00:40.194  INFO 14304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 16:00:40.195  INFO 14304 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 16:00:40.218  INFO 14304 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 16:00:40.305  WARN 14304 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:00:40.318  WARN 14304 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:00:40.326  INFO 14304 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 16:00:40.326  INFO 14304 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:00:43.703  INFO 14304 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[25, {}]}
+2021-02-22 16:00:43.725  INFO 14304 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:00:43.725  INFO 14304 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:00:51.048  INFO 14304 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:00:51.050  INFO 14304 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:00:51.050  INFO 14304 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:02:09.145  INFO 1252 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 1252 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 16:02:09.146 DEBUG 1252 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 16:02:09.147  INFO 1252 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 16:02:09.177  INFO 1252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 16:02:09.177  INFO 1252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 16:02:09.605  INFO 1252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 16:02:09.643  INFO 1252 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2021-02-22 16:02:10.128  INFO 1252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 16:02:10.133  INFO 1252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 16:02:10.134  INFO 1252 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 16:02:10.180  INFO 1252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 16:02:10.180  INFO 1252 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1002 ms
+2021-02-22 16:02:10.278  INFO 1252 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 16:02:10.303  INFO 1252 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 16:02:10.367  INFO 1252 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 16:02:10.424  INFO 1252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 16:02:10.666  INFO 1252 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 16:02:10.678  INFO 1252 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 16:02:11.175  INFO 1252 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 16:02:11.181  INFO 1252 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 16:02:11.218  INFO 1252 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 16:02:11.803  WARN 1252 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 16:02:11.919  INFO 1252 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 16:02:11.989  INFO 1252 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 16:02:12.183  INFO 1252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 16:02:12.190  INFO 1252 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.535 seconds (JVM running for 4.44)
+2021-02-22 16:02:17.857  INFO 1252 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 16:02:17.857  INFO 1252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 16:02:17.858  INFO 1252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 16:02:17.880  INFO 1252 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:02:17.904  INFO 1252 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:02:17.904  INFO 1252 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:02:52.862  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:02:52.865  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:02:52.865  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:03:28.436  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:03:28.439  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:03:28.439  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:04:24.898  INFO 1252 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:04:24.901  INFO 1252 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:04:24.901  INFO 1252 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:04:43.068  INFO 1252 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 16:04:43.070  INFO 1252 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:04:43.070  INFO 1252 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:10:03.905  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 16:10:03.915  WARN 1252 --- [http-nio-8080-exec-10] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:10:03.922  WARN 1252 --- [http-nio-8080-exec-10] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:10:03.928  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 16:10:03.928  INFO 1252 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:10:13.379  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 16:10:13.381  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:10:13.381  INFO 1252 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:26:44.742  INFO 3496 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 3496 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 16:26:44.744 DEBUG 3496 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 16:26:44.744  INFO 3496 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 16:26:44.775  INFO 3496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 16:26:44.776  INFO 3496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 16:26:45.399  INFO 3496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 16:26:45.443  INFO 3496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
+2021-02-22 16:26:46.018  INFO 3496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 16:26:46.025  INFO 3496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 16:26:46.025  INFO 3496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 16:26:46.095  INFO 3496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 16:26:46.095  INFO 3496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2021-02-22 16:26:46.254  INFO 3496 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 16:26:46.336  INFO 3496 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 16:26:46.480  INFO 3496 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 16:26:46.555  INFO 3496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 16:26:46.924  INFO 3496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 16:26:46.940  INFO 3496 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 16:26:47.650  INFO 3496 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 16:26:47.664  INFO 3496 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 16:26:47.701  INFO 3496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 16:26:48.393  WARN 3496 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 16:26:48.514  INFO 3496 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 16:26:48.590  INFO 3496 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 16:26:48.816  INFO 3496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 16:26:48.822  INFO 3496 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 4.465 seconds (JVM running for 5.063)
+2021-02-22 16:35:54.788  INFO 9924 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 9924 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 16:35:54.801 DEBUG 9924 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 16:35:54.801  INFO 9924 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 16:35:54.884  INFO 9924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 16:35:54.884  INFO 9924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 16:35:56.135  INFO 9924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 16:35:56.193  INFO 9924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2021-02-22 16:35:56.792  INFO 9924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 16:35:56.799  INFO 9924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 16:35:56.799  INFO 9924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 16:35:56.902  INFO 9924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 16:35:56.902  INFO 9924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2017 ms
+2021-02-22 16:35:57.090  INFO 9924 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 16:35:57.179  INFO 9924 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 16:35:57.332  INFO 9924 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 16:35:57.417  INFO 9924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 16:35:57.816  INFO 9924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 16:35:57.844  INFO 9924 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 16:35:58.630  INFO 9924 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 16:35:58.646  INFO 9924 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 16:35:58.705  INFO 9924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 16:35:59.466  WARN 9924 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 16:35:59.618  INFO 9924 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 16:35:59.706  INFO 9924 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 16:35:59.998  INFO 9924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 16:36:00.004  INFO 9924 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 6.308 seconds (JVM running for 7.533)
+2021-02-22 16:36:15.317  INFO 9924 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 16:36:15.318  INFO 9924 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 16:36:15.318  INFO 9924 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-02-22 16:36:15.348  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 16:36:15.543  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:36:15.543  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:37:17.401  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 16:37:17.407  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:37:17.407  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:38:11.167  INFO 9924 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[25, {}]}
+2021-02-22 16:38:11.172  INFO 9924 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:38:11.172  INFO 9924 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:38:37.888  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[25, {}]}
+2021-02-22 16:38:37.892  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:38:37.892  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:40:46.706  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 16:40:46.924  WARN 9924 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:40:46.936  WARN 9924 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 16:40:46.947  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 16:40:46.947  INFO 9924 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:40:52.351  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 16:40:52.354  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:40:52.355  INFO 9924 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:42:13.396  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 16:42:13.415  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 16:42:13.415  INFO 9924 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 16:42:15.245  INFO 9924 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 16:42:15.250  INFO 9924 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 16:42:15.250  INFO 9924 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:19:23.256  INFO 14936 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 14936 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:19:23.258 DEBUG 14936 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:19:23.258  INFO 14936 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:19:23.316  INFO 14936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:19:23.316  INFO 14936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:19:24.427  INFO 14936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:19:24.476  INFO 14936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:19:25.150  INFO 14936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:19:25.158  INFO 14936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:19:25.158  INFO 14936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:19:25.229  INFO 14936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:19:25.230  INFO 14936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1914 ms
+2021-02-22 18:19:25.405  INFO 14936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:19:25.510  INFO 14936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:19:25.713  INFO 14936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:19:25.814  INFO 14936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:19:26.230  INFO 14936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:19:26.245  INFO 14936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:19:27.188  INFO 14936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:19:27.210  INFO 14936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:19:27.256  INFO 14936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:19:28.059  WARN 14936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:19:28.195  INFO 14936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:19:28.282  INFO 14936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:19:28.642  INFO 14936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:19:28.648  INFO 14936 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 6.512 seconds (JVM running for 8.359)
+2021-02-22 18:19:33.259  INFO 14936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:19:33.260  INFO 14936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:19:33.260  INFO 14936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-02-22 18:19:33.286  INFO 14936 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:19:33.477  WARN 14936 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:19:33.488  WARN 14936 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:19:33.495  INFO 14936 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:19:33.495  INFO 14936 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:19:36.640  INFO 14936 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:19:36.693  INFO 14936 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:19:36.693  INFO 14936 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:21:11.362  INFO 14936 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:21:11.366  INFO 14936 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:21:11.366  INFO 14936 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:21:29.102  INFO 14936 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='打发打发', email='onlyfortwitterzlx@163.com', content='测试评论', avatar='null', createTime=null, blog=Blog{id=26, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:21:29.183  INFO 14936 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:redirect:/comments26
+2021-02-22 18:21:29.184  INFO 14936 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:21:51.351  INFO 14936 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:21:51.357  INFO 14936 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:21:51.357  INFO 14936 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:22:18.622  INFO 14316 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 14316 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:22:18.624 DEBUG 14316 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:22:18.624  INFO 14316 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:22:18.651  INFO 14316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:22:18.651  INFO 14316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:22:19.081  INFO 14316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:22:19.133  INFO 14316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:22:19.634  INFO 14316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:22:19.641  INFO 14316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:22:19.641  INFO 14316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:22:19.692  INFO 14316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:22:19.692  INFO 14316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
+2021-02-22 18:22:19.794  INFO 14316 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:22:19.823  INFO 14316 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:22:19.891  INFO 14316 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:22:19.951  INFO 14316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:22:20.191  INFO 14316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:22:20.204  INFO 14316 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:22:20.701  INFO 14316 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:22:20.707  INFO 14316 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:22:20.743  INFO 14316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:22:21.421  WARN 14316 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:22:21.539  INFO 14316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:22:21.610  INFO 14316 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:22:21.810  INFO 14316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:22:21.817  INFO 14316 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.541 seconds (JVM running for 4.525)
+2021-02-22 18:22:31.253  INFO 14316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:22:31.253  INFO 14316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:22:31.254  INFO 14316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 18:22:31.278  INFO 14316 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:22:31.355  INFO 14316 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:22:31.355  INFO 14316 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:22:43.350  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='各个', email='Zelexshaw@163.com', content='测试评论', avatar='null', createTime=null, blog=Blog{id=26, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:22:43.388  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:redirect:/comments26
+2021-02-22 18:22:43.388  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:23:53.957  INFO 14316 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:23:53.965  INFO 14316 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:23:53.965  INFO 14316 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:24:51.954  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:24:51.958  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:24:51.958  INFO 14316 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:25:02.887  INFO 14316 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:25:02.891  INFO 14316 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:25:02.891  INFO 14316 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:25:43.108  INFO 13492 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 13492 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:25:43.110 DEBUG 13492 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:25:43.110  INFO 13492 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:25:43.145  INFO 13492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:25:43.146  INFO 13492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:25:43.581  INFO 13492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:25:43.623  INFO 13492 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:25:44.116  INFO 13492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:25:44.122  INFO 13492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:25:44.122  INFO 13492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:25:44.174  INFO 13492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:25:44.175  INFO 13492 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1029 ms
+2021-02-22 18:25:44.273  INFO 13492 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:25:44.299  INFO 13492 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:25:44.366  INFO 13492 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:25:44.427  INFO 13492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:25:44.668  INFO 13492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:25:44.681  INFO 13492 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:25:45.198  INFO 13492 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:25:45.204  INFO 13492 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:25:45.241  INFO 13492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:25:45.897  WARN 13492 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:25:46.033  INFO 13492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:25:46.117  INFO 13492 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:25:46.393  INFO 13492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:25:46.400  INFO 13492 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.687 seconds (JVM running for 4.852)
+2021-02-22 18:25:48.455  INFO 13492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:25:48.455  INFO 13492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:25:48.456  INFO 13492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 18:25:48.478  INFO 13492 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:25:48.549  WARN 13492 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:25:48.559  WARN 13492 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:25:48.569  INFO 13492 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:25:48.569  INFO 13492 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:25:51.829  INFO 13492 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:25:51.865  INFO 13492 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:25:51.865  INFO 13492 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:26:00.014  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:26:00.018  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:26:00.019  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:31:29.528  INFO 13492 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:31:29.544  INFO 13492 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:31:29.544  INFO 13492 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:31:30.795  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:31:30.798  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:31:30.798  INFO 13492 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:31:37.565  INFO 13492 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[25, {}]}
+2021-02-22 18:31:37.569  INFO 13492 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:31:37.570  INFO 13492 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:39:41.319  INFO 9452 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 9452 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:39:41.321 DEBUG 9452 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:39:41.321  INFO 9452 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:39:41.350  INFO 9452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:39:41.351  INFO 9452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:39:41.783  INFO 9452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:39:41.827  INFO 9452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:39:42.361  INFO 9452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:39:42.366  INFO 9452 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:39:42.367  INFO 9452 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:39:42.418  INFO 9452 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:39:42.418  INFO 9452 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1067 ms
+2021-02-22 18:39:42.535  INFO 9452 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:39:42.574  INFO 9452 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:39:42.646  INFO 9452 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:39:42.705  INFO 9452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:39:42.948  INFO 9452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:39:42.960  INFO 9452 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:39:43.451  INFO 9452 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:39:43.457  INFO 9452 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:39:43.494  INFO 9452 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:39:44.186  WARN 9452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:39:44.308  INFO 9452 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:39:44.386  INFO 9452 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:39:44.600  INFO 9452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:39:44.606  INFO 9452 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.614 seconds (JVM running for 4.7)
+2021-02-22 18:40:09.902  INFO 9452 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:40:09.902  INFO 9452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:40:09.903  INFO 9452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 18:40:09.928  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:40:10.002  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:40:10.002  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:40:18.450  INFO 9452 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/25', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[25, {}]}
+2021-02-22 18:40:18.455  INFO 9452 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:40:18.455  INFO 9452 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:40:25.440  INFO 9452 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:40:25.444  INFO 9452 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:40:25.444  INFO 9452 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:40:34.266  INFO 9452 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 1, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:40:34.302  WARN 9452 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:40:34.315  WARN 9452 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:40:34.325  INFO 9452 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:40:34.326  INFO 9452 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:40:35.787  INFO 9452 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 18:40:35.792  INFO 9452 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:40:35.792  INFO 9452 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:40:54.676  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='安安', email='dreamerking666@gmail.com', content='略略略', avatar='null', createTime=null, blog=Blog{id=23, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:40:54.707  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:redirect:/comments23
+2021-02-22 18:40:54.707  INFO 9452 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:43:02.263  INFO 9452 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 1, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:43:02.276  INFO 9452 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:43:02.276  INFO 9452 --- [http-nio-8080-exec-7] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:43:05.973  INFO 9452 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:43:05.987  INFO 9452 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:43:05.987  INFO 9452 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:43:07.518  INFO 9452 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:43:07.521  INFO 9452 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:43:07.521  INFO 9452 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:46:22.932  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 11888 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:46:22.934 DEBUG 11888 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:46:22.934  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:46:22.964  INFO 11888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:46:22.964  INFO 11888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:46:23.418  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:46:23.466  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:46:23.957  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:46:23.962  INFO 11888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:46:23.962  INFO 11888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:46:24.015  INFO 11888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:46:24.015  INFO 11888 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1050 ms
+2021-02-22 18:46:24.122  INFO 11888 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:46:24.151  INFO 11888 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:46:24.220  INFO 11888 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:46:24.282  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:46:24.522  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:46:24.535  INFO 11888 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:46:25.038  INFO 11888 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:46:25.043  INFO 11888 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:46:25.083  INFO 11888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:46:25.749  WARN 11888 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:46:25.873  INFO 11888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:46:25.943  INFO 11888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:46:26.144  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:46:26.150  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.527 seconds (JVM running for 4.01)
+2021-02-22 18:46:32.939  INFO 11888 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:46:32.939  INFO 11888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:46:32.941  INFO 11888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-02-22 18:46:32.965  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:46:33.058  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:46:33.058  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:46:34.461  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:46:34.509  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:46:34.509  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:46:50.194  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 1, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:46:50.217  WARN 11888 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:46:50.226  WARN 11888 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:46:50.234  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:46:50.234  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:46:51.619  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[23, {}]}
+2021-02-22 18:46:51.626  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:46:51.626  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:46:52.649  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/23', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[23, {}]}
+2021-02-22 18:46:52.656  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:46:52.657  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:01.579  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:47:01.596  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:47:01.596  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:03.713  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:47:03.718  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:47:03.718  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:04.218  INFO 11888 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:47:04.222  INFO 11888 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:47:04.222  INFO 11888 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:37.584  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='指针', email='Zelexshaw@163.com', content='回复@各个', avatar='null', createTime=null, blog=Blog{id=26, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=28, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:47:37.609  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:redirect:/comments26
+2021-02-22 18:47:37.609  INFO 11888 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:45.829  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:47:45.834  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:47:45.835  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:47:46.250  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:47:46.256  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:47:46.256  INFO 11888 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:49:14.872  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:49:14.878  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:49:14.878  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:49:15.358  INFO 11888 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:49:15.362  INFO 11888 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:49:15.362  INFO 11888 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:51:57.945  INFO 11888 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:51:57.949  INFO 11888 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:51:57.949  INFO 11888 --- [http-nio-8080-exec-9] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:51:58.491  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:51:58.495  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:51:58.495  INFO 11888 --- [http-nio-8080-exec-3] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:52:08.336  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='信息', email='895228344@qq.com', content='来来来', avatar='null', createTime=null, blog=Blog{id=26, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:52:08.349  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:redirect:/comments26
+2021-02-22 18:52:08.349  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:53:56.665  INFO 11888 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:53:56.666  INFO 11888 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:53:56.670  INFO 11888 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-22 18:53:56.673  INFO 11888 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-02-22 18:53:56.887  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 11888 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:53:56.888 DEBUG 11888 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:53:56.888  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:53:57.008  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:53:57.021  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:53:57.129  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:53:57.129  INFO 11888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:53:57.129  INFO 11888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:53:57.137  INFO 11888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:53:57.137  INFO 11888 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 248 ms
+2021-02-22 18:53:57.177  INFO 11888 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:53:57.180  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-02-22 18:53:57.191  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-02-22 18:53:57.191  INFO 11888 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:53:57.298  INFO 11888 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:53:57.298  INFO 11888 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:53:57.319  INFO 11888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:53:57.617  WARN 11888 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:53:57.731  INFO 11888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:53:57.765  INFO 11888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:53:57.905  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:53:57.907  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 1.043 seconds (JVM running for 455.768)
+2021-02-22 18:53:57.909  INFO 11888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-22 18:53:59.405  INFO 11888 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:53:59.406  INFO 11888 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:53:59.406  INFO 11888 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-02-22 18:53:59.411  INFO 11888 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-02-22 18:53:59.553  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 11888 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:53:59.553 DEBUG 11888 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:53:59.553  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:53:59.650  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:53:59.665  INFO 11888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:53:59.749  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:53:59.750  INFO 11888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:53:59.750  INFO 11888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:53:59.760  INFO 11888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:53:59.760  INFO 11888 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
+2021-02-22 18:53:59.800  INFO 11888 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:53:59.802  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-02-22 18:53:59.811  INFO 11888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-02-22 18:53:59.812  INFO 11888 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:53:59.896  INFO 11888 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:53:59.896  INFO 11888 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:53:59.919  INFO 11888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:54:00.222  WARN 11888 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:54:00.318  INFO 11888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:54:00.348  INFO 11888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:54:00.478  INFO 11888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:54:00.481  INFO 11888 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 0.948 seconds (JVM running for 458.341)
+2021-02-22 18:54:00.482  INFO 11888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-02-22 18:54:00.637  INFO 11888 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:54:00.639  INFO 11888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:54:00.642  INFO 11888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-02-22 18:54:00.651  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:54:00.681  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:54:00.681  INFO 11888 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:54:07.772  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:54:07.775  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:54:07.775  INFO 11888 --- [http-nio-8080-exec-2] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:54:15.624  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='127.0.0.1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:54:15.627  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:54:15.628  INFO 11888 --- [http-nio-8080-exec-5] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:54:26.196  INFO 5208 --- [restartedMain] com.zelex.MyblogApplication              : Starting MyblogApplication using Java 1.8.0_221 on DESKTOP-8FK8BTP with PID 5208 (D:\JavaProg\myblog\target\classes started by LingXiao in D:\JavaProg\myblog)
+2021-02-22 18:54:26.198 DEBUG 5208 --- [restartedMain] com.zelex.MyblogApplication              : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-22 18:54:26.198  INFO 5208 --- [restartedMain] com.zelex.MyblogApplication              : The following profiles are active: dev
+2021-02-22 18:54:26.227  INFO 5208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-22 18:54:26.227  INFO 5208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-22 18:54:26.656  INFO 5208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-22 18:54:26.701  INFO 5208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 5 JPA repository interfaces.
+2021-02-22 18:54:27.200  INFO 5208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-22 18:54:27.205  INFO 5208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-22 18:54:27.206  INFO 5208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-22 18:54:27.257  INFO 5208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-22 18:54:27.257  INFO 5208 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1029 ms
+2021-02-22 18:54:27.358  INFO 5208 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-22 18:54:27.386  INFO 5208 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-22 18:54:27.451  INFO 5208 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-22 18:54:27.508  INFO 5208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-22 18:54:27.749  INFO 5208 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-22 18:54:27.762  INFO 5208 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-02-22 18:54:28.239  INFO 5208 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-22 18:54:28.245  INFO 5208 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-22 18:54:28.282  INFO 5208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-22 18:54:28.940  WARN 5208 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-22 18:54:29.060  INFO 5208 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-22 18:54:29.132  INFO 5208 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-22 18:54:29.334  INFO 5208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-22 18:54:29.340  INFO 5208 --- [restartedMain] com.zelex.MyblogApplication              : Started MyblogApplication in 3.462 seconds (JVM running for 3.934)
+2021-02-22 18:54:41.783  INFO 5208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-22 18:54:41.783  INFO 5208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-22 18:54:41.784  INFO 5208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-22 18:54:41.805  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.index', args=[Page request [number: 0, size 2, sort: updateTime: DESC], {}]}
+2021-02-22 18:54:41.881  WARN 5208 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:54:41.891  WARN 5208 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-02-22 18:54:41.911  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:index
+2021-02-22 18:54:41.911  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:54:43.505  INFO 5208 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:54:43.542  INFO 5208 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:54:43.542  INFO 5208 --- [http-nio-8080-exec-4] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:55:42.568  INFO 5208 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/blog/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.IndexController.blog', args=[26, {}]}
+2021-02-22 18:55:42.573  INFO 5208 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : Result:blog
+2021-02-22 18:55:42.573  INFO 5208 --- [http-nio-8080-exec-10] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:55:43.110  INFO 5208 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:55:43.133  INFO 5208 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:55:43.134  INFO 5208 --- [http-nio-8080-exec-8] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:56:31.046  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.post', args=[Comment{id=null, nickname='我是优秀哥', email='ddd@163.com', content='@信息 优秀', avatar='null', createTime=null, blog=Blog{id=26, title='null', content='null', firstPicture='null', flag='null', views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replyComments=[], parentComment=Comment{id=31, nickname='null', email='null', content='null', avatar='null', createTime=null, blog=null, replyComments=[], parentComment=null, adminComment=false}, adminComment=false}]}
+2021-02-22 18:56:31.074  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : Result:redirect:/comments/26
+2021-02-22 18:56:31.074  INFO 5208 --- [http-nio-8080-exec-1] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
+2021-02-22 18:56:31.084  INFO 5208 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:{url='http://localhost:8080/comments/26', ip='0:0:0:0:0:0:0:1', classMethod='com.zelex.web.CommentController.comments', args=[26, {}]}
+2021-02-22 18:56:31.087  INFO 5208 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : Result:blog :: commentList
+2021-02-22 18:56:31.087  INFO 5208 --- [http-nio-8080-exec-6] com.zelex.aspect.LogAspect               : ---------------doAfter---------------
